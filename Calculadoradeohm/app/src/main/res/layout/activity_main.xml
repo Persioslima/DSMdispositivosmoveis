@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/editTextV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Tensão (V)"
+        android:inputType="numberDecimal"
+        android:padding="16dp"
+        android:layout_marginBottom="16dp"/>
+
+    <EditText
+        android:id="@+id/editTextI"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Corrente (I)"
+        android:inputType="numberDecimal"
+        android:padding="16dp"
+        android:layout_below="@id/editTextV"
+        android:layout_marginBottom="16dp"/>
+
+    <EditText
+        android:id="@+id/editTextR"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Resistência (R)"
+        android:inputType="numberDecimal"
+        android:padding="16dp"
+        android:layout_below="@id/editTextI"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/buttonCalculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calcular"
+        android:layout_below="@id/editTextR"
+        android:layout_marginTop="16dp"/>
+
+    <Button
+        android:id="@+id/buttonClear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Limpar"
+        android:layout_below="@id/buttonCalculate"
+        android:layout_marginTop="16dp"/>
+
+
+    <TextView
+        android:id="@+id/textViewResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Resultado: "
+        android:layout_below="@+id/buttonClear"
+        android:layout_marginTop="16dp"
+        android:textSize="18sp"/>
+
+
+
+</RelativeLayout>
