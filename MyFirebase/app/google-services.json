@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "990881226506",
+    "project_id": "appfatec-35874",
+    "storage_bucket": "appfatec-35874.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:990881226506:android:f96d3c08cb00131050a4f3",
+        "android_client_info": {
+          "package_name": "br.edu.fatecpg"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAIb5aJh_L-1F9MrL-VOQk1BkeCZegxTxg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
