@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.filmes.view.MainActivity">
+
+    <TextView
+        android:id="@+id/toolbar_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Meus Filmes Favoritos"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="16dp" />
+
+    <!-- Campos de entrada para título e diretor -->
+    <EditText
+        android:id="@+id/editTextTitulo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Título"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp" />
+
+    <EditText
+        android:id="@+id/editTextDiretor"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Diretor"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/editTextTitulo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp" />
+
+    <Button
+        android:id="@+id/buttonAdicionarFilme"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Adicionar Filme"
+        app:layout_constraintTop_toBottomOf="@id/editTextDiretor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp"/>
+
+    <Button
+        android:id="@+id/buttonExibirFilmes"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Exibir Filmes"
+        app:layout_constraintTop_toBottomOf="@id/buttonAdicionarFilme"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewFilmes"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/buttonExibirFilmes"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
