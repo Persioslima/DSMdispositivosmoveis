@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "706499421764",
+    "project_id": "cadastroprodutos-672b6",
+    "storage_bucket": "cadastroprodutos-672b6.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:706499421764:android:78efdaaec8bfb6ae823e11",
+        "android_client_info": {
+          "package_name": "br.edu.cadastroproduto"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCBCRD5CgNKVtH52e6yr5WY6E_YytwqClk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

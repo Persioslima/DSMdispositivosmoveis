@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- EditText para o nome do produto -->
+    <EditText
+        android:id="@+id/editNome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nome do Produto"
+        android:inputType="text"
+        android:textSize="20dp"/>
+
+    <!-- EditText para a categoria do produto -->
+    <EditText
+        android:id="@+id/editCategoria"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Categoria do Produto"
+        android:inputType="text"
+        android:textSize="20dp"/>
+
+    <!-- EditText para o preço do produto -->
+    <EditText
+        android:id="@+id/editPreco"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Preço do Produto"
+        android:inputType="numberDecimal"
+        android:textSize="20dp"/>
+
+    <!-- Botão para salvar o produto -->
+    <Button
+        android:id="@+id/salva"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Salvar Produto"/>
+
+    <!-- Botão para exibir a lista de produtos -->
+    <Button
+        android:id="@+id/btnExibirProdutos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Exibir Produtos"/>
+
+</LinearLayout>
