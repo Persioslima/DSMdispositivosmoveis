@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Clinica Medica</string>
+
+    <!-- Definindo o array de tipos de usuário -->
+    <string-array name="tipo_usuario_array">
+        <item>Médico</item>
+        <item>Paciente</item>
+    </string-array>
+</resources>

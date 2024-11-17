@@ -1,0 +1,53 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- EditText para nome -->
+    <EditText
+        android:id="@+id/editTextNome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nome"
+        android:inputType="text"
+        android:textSize="20sp"/>
+
+    <!-- EditText para email -->
+    <EditText
+        android:id="@+id/editTextEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextNome"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:textSize="20sp"/>
+
+    <!-- EditText para senha -->
+    <EditText
+        android:id="@+id/editTextSenha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextEmail"
+        android:hint="Senha"
+        android:inputType="textPassword"
+        android:textSize="20sp"/>
+
+    <!-- Spinner para selecionar o tipo de usuário (Médico ou Paciente) -->
+    <Spinner
+        android:id="@+id/spinnerTipoUsuario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextSenha"
+        android:spinnerMode="dropdown"
+        android:padding="16dp"/>
+
+    <!-- Botão para cadastrar o usuário -->
+    <Button
+        android:id="@+id/buttonCadastrar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cadastrar"
+        android:layout_below="@id/spinnerTipoUsuario"
+        android:layout_marginTop="20dp" />
+
+</RelativeLayout>

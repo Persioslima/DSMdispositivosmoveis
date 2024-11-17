@@ -1,0 +1,60 @@
+<!-- activity_paciente.xml -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+
+    <EditText
+        android:id="@+id/etNome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nome do Paciente"
+        android:inputType="text"
+        android:textSize="20sp"/>
+
+    <!-- Campo para tipo de consulta -->
+    <EditText
+        android:id="@+id/etTipoConsulta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Tipo de Consulta"
+        android:inputType="text"
+        android:textSize="20sp"/>
+
+    <!-- Campo para data da consulta -->
+    <EditText
+        android:id="@+id/etDataConsulta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Data da Consulta (dd/MM/yyyy)"
+        android:inputType="date"
+        android:textSize="20sp"/>
+
+    <!-- Campo para hora da consulta -->
+    <EditText
+        android:id="@+id/etHoraConsulta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Hora da Consulta (HH:mm)"
+        android:inputType="time"
+        android:textSize="20sp"/>
+
+
+    <!-- Botão para agendar consulta -->
+    <Button
+        android:id="@+id/btnAgendarConsulta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Agendar Consulta" />
+
+    <!-- Botão para sair e retornar à tela de login -->
+    <Button
+        android:id="@+id/btnSair"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sair" />
+
+</LinearLayout>
