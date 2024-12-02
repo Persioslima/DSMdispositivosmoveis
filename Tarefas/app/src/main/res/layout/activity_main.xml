@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/edt_nome_tarefa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nome da Tarefa" />
+
+    <EditText
+        android:id="@+id/edt_descricao_tarefa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Descrição da Tarefa" />
+
+    <Button
+        android:id="@+id/btn_salvar_tarefa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Salvar" />
+
+    <Button
+        android:id="@+id/btn_exibir_tarefas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Exibir Tarefas" />
+</LinearLayout>
