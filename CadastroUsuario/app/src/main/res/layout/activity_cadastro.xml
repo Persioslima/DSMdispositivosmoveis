@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center">
+
+    <!-- Campo de E-mail -->
+    <EditText
+        android:id="@+id/editTextCadastroEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Digite seu e-mail"
+        android:inputType="textEmailAddress"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/editTextCadastroSenha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Digite sua senha"
+        android:inputType="textPassword"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/editTextCadastroConfirmarSenha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Confirme sua senha"
+        android:inputType="textPassword"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/buttonCadastrar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cadastrar"
+        android:enabled="false" />
+
+</LinearLayout>

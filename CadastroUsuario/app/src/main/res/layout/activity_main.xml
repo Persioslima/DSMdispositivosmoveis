@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center">
+
+    <!-- Campo de E-mail -->
+    <EditText
+        android:id="@+id/editTextEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Digite seu e-mail"
+        android:inputType="textEmailAddress"
+        android:textSize="20sp"
+        android:importantForAccessibility="yes"
+        android:labelFor="@+id/editTextEmail"/>
+
+    <!-- Campo de Senha -->
+    <EditText
+        android:id="@+id/editTextSenha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Digite sua senha"
+        android:inputType="textPassword"
+        android:textSize="20sp"
+        android:importantForAccessibility="yes"
+        android:labelFor="@+id/editTextSenha"/>
+
+    <!-- Botão de Login -->
+    <Button
+        android:id="@+id/buttonLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Entrar"
+        android:enabled="false"
+        android:minHeight="48dp"
+        android:minWidth="48dp"
+        android:importantForAccessibility="yes"
+        android:contentDescription="Botão para efetuar login"/>
+
+    <!-- Link para Cadastro -->
+    <TextView
+        android:id="@+id/textViewCadastro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Não tem conta? Cadastre-se aqui"
+        android:textColor="@android:color/holo_blue_dark"
+        android:clickable="true"
+        android:focusable="true"
+        android:importantForAccessibility="yes"
+        android:contentDescription="Link para se cadastrar no aplicativo"
+        android:minHeight="48dp"
+        android:minWidth="48dp"
+        android:textSize="30sp"/>
+</LinearLayout>
