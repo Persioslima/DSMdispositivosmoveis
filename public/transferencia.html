@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Transferência Bancária com Criptografia</title>
+</head>
+<body>
+  <h1>Transferência Bancária</h1>
+
+  <label>Destino:</label><br>
+  <input type="text" id="destino"><br><br>
+
+  <label>Valor (R$):</label><br>
+  <input type="text" id="valor"><br><br>
+
+  <button onclick="criptografar()">🔐 Criptografar Dados</button>
+  <button onclick="descriptografar()">🔓 Descriptografar Dados</button>
+  <button onclick="transferir()">💸 Transferir</button>
+  <button onclick="novaTransacao()">🔄 Nova Transação</button>
+
+  <h3>Resultado:</h3>
+  <div id="resultado"></div>
+
+  <script>
+    // 🔐 Variáveis para guardar os últimos dados criptografados
+    let ultimoCipherDestino = '';
+    let ultimoCipherValor = '';
+
+    async function criptografar() {
+      const destino = document.getElementById('destino').value;
+      const valor = document.getElementById('valor').value;
+
+      const res = await fetch('/criptografar', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ destino, valor })
+      });
+
+      const data = await res.json();
+
+      // Salva os dados criptografados nas variáveis
+      ultimoCipherDestino = data.cipherDestino;
+      ultimoCipherValor = data.cipherValor;
+
+      // Mostra na div de resultado
+      document.getElementById('resultado').innerText = 
+        'Criptografado:\nDestino: ' + data.cipherDestino + '\nValor: ' + data.cipherValor;
+    }
+
+    async function descriptografar() {
+      if (!ultimoCipherDestino || !ultimoCipherValor) {
+        document.getElementById('resultado').innerText = 'Nenhum dado criptografado encontrado.';
+        return;
+      }
+
+      const res = await fetch('/descriptografar', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ 
+          cipherDestino: ultimoCipherDestino, 
+          cipherValor: ultimoCipherValor 
+        })
+      });
+
+      const data = await res.json();
+
+      if (data.erro) {
+        document.getElementById('resultado').innerText = 'Erro: ' + data.erro;
+      } else {
+        document.getElementById('resultado').innerText = 
+          'Descriptografado:\nDestino: ' + data.destino + '\nValor: ' + data.valor;
+      }
+    }
+
+    async function transferir() {
+      const destino = document.getElementById('destino').value;
+      const valor = document.getElementById('valor').value;
+
+      const res = await fetch('/transferir', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ destino, valor })
+      });
+
+      const data = await res.json();
+      document.getElementById('resultado').innerText = data.mensagem;
+    }
+
+    function novaTransacao() {
+      document.getElementById('destino').value = '';
+      document.getElementById('valor').value = '';
+      document.getElementById('resultado').innerText = '';
+      ultimoCipherDestino = '';
+      ultimoCipherValor = '';
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <title>Transferência Vulnerável a XSS</title>
+</head>
+<body>
+  <h1>Transferência Bancária (Página Vulnerável)</h1>
+
+  <form id="formTransferencia" method="POST" action="/transferir_vulneravel">
+    <label for="destino">Destino:</label><br />
+    <input type="text" id="destino" name="destino" required /><br /><br />
+
+    <label for="valor">Valor (R$):</label><br />
+    <input type="number" id="valor" name="valor" step="0.01" required /><br /><br />
+
+    <button type="submit">Transferir</button>
+  </form>
+
+  <div id="resultado"></div>
+
+  <script>
+    const form = document.getElementById('formTransferencia');
+    const resultadoDiv = document.getElementById('resultado');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const formData = new FormData(form);
+      const data = {
+        destino: formData.get('destino'),
+        valor: formData.get('valor')
+      };
+
+      const response = await fetch('/transferir_vulneravel', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      });
+
+      const result = await response.json();
+
+      resultadoDiv.innerHTML = result.mensagem;
+    });
+  </script>
+
+  <br>
+  <a href="index.html">Voltar ao Menu</a>
+</body>
+</html>
