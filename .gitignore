@@ -26,8 +26,7 @@ Thumbs.db  # Windows
 .vscode/
 .idea/
 
-# Documentação gerada automaticamente (opcional)
-docs/
+
 
 # Arquivos de backup comuns
 *.bak
